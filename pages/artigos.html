@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/artigos.css">
+    <link rel="stylesheet" href="../bootstrap-4.1.3-dist/css/bootstrap.min.css">
+    <script type="text/javascript" src="../bootstrap-4.1.3-dist/js/bootstrap.min.js"></script>
+    
+    <script type="module" src="/scripts/login_app.js" defer></script>
+    <script type="text/javascript" src="/scripts/utilites.js" defer></script>
+    <script type="text/javascript" src="../server/scripts/createDefaultArtigos.js" defer></script>
+    <script type="text/javascript" src="/scripts/nav.js" defer></script>
+
+    <title>Artigos</title>
+</head>
+<body onload="local(), changeNav()">
+    <header id="masterNav">
+        <nav class="nav-main-grid">
+            <div class="cont-nav-left"> 
+                <a id="mindHome" href="">
+                    <img src="/img/logo_p3.png" class="logo_size" alt="logo" style="cursor: pointer;"/>
+                </a>
+            </div>
+            <div class="cont-nav-center">
+
+            </div>
+            <div class="cont-nav-right">  
+                <div class="nav-right-buttons">
+
+                </div>
+            </div>
+        </nav>
+            <div id="sideNav">
+            </div>
+    </header>
+    
+    <section class="art-main-section">
+        <div class="artigo-sect">
+            <h1>Artigos de Saúde Mental</h1>
+            <h2>Rápidas dicas e recomendações sobre saúde mental e segurança pessoal para o seu dia a dia</h2>
+            <hr>
+            <div id="local_dos_artigos" class="artigos">
+                <!-- Artigos serão inseridos aqui -->
+            </div>
+        </div>
+    </section>
+    
+    <footer id="mainFooter">
+    </footer>
+
+
+    <script type="text/javascript" defer>
+        const artigos = document.querySelectorAll('.artigo-btn'); 
+        artigos.forEach((btn, index) => {
+            btn.addEventListener('click', () => {
+                btn.classList.toggle('clicked');
+                if (btn.classList.contains('clicked')){
+                    btn.innerHTML = 'Recolher'
+                } else {
+                    btn.innerHTML = 'Ver'
+                    btn.nextElementSibling.innerHTML = ''
+                }
+                console.log(index)   
+            });
+        });
+    </script>
+
+    
+    <script type="text/javascript" src="/scripts/artigos.js"></script>
+
+</body>
+</html>

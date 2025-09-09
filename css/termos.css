@@ -1,0 +1,47 @@
+.termos-container{
+    display: flex;
+    flex-direction: column;
+    margin-inline: 2rem;
+    align-items: center;
+}
+
+ol{
+    display: flex;
+    flex-direction: column;
+    padding-inline: 0.5em;
+    counter-reset: item;
+}
+
+ol > li{
+    display: table;
+    counter-increment: item;
+    padding-top: 0.7em;
+    padding-bottom: 0.9em;
+    text-indent: 40px;
+}
+ol > li::before{
+    content: counters(item, ".") ". - ";
+
+}
+.letter-li{
+    counter-reset: chapter;
+}
+
+.letter-li > li{
+    counter-increment: chapter;
+}
+
+.letter-li > li::before{
+    content: counter(chapter, lower-alpha) ". - ";
+}
+.titulo-termos{
+    margin-bottom:2rem;
+}
+@media(max-width:800px){
+    .termos-container{
+        margin-inline: 0rem;
+    }
+    ol > li{
+        font-size: 12px;
+    }
+}

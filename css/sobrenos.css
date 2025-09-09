@@ -1,0 +1,230 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+    color:#000;
+}
+:root{
+    --color-01:#F8A764;
+    --color-01-hover:#f59444;
+    --color-02:#F5E0A5;
+    --color-03:#1C5841;
+    --color-04:#00AD6E;
+    --color-05:#D46240;
+    --font-01:#FFFFFF;
+    --font-02:#16120D;
+    --btn-alerta:#8D2000;
+}
+
+.container-sb-1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: var(--color-03);
+    width: 100%;
+    align-items:center
+}
+.imagem1{
+    margin: 4rem;
+    width:clamp(250px, 20vw, 400px);
+}
+.container-text-sb-1{
+    width: 50%;
+}
+.container-text-sb-1 p{
+    color: var(--font-01);
+    font-size: 1rem;
+    font-weight: 500;
+    text-indent: 2rem; 
+    margin:30px;
+    margin-inline: 5%;
+}
+.container-sb-2{
+    display: flex;
+    flex-direction: row;
+    background-color: var(--font-01);
+    padding: 4rem;
+    justify-content: space-around;
+    align-items:center
+}
+.container-text-sb-2{
+    flex-direction: column;
+    align-items: center;
+}
+.container-text-sb-2 p{
+    font-size: 1rem;
+    font-weight:500;
+    text-indent: 2rem; 
+}
+.imagem2{
+    width: 300px;
+    border-radius: 10px;
+}
+.container-text-sb-2{
+    width: 50%;
+    margin: 2rem;
+}
+/* 
+responsividade -------------------------------------- */
+
+@media(max-width:836px){
+    .container-sb-1{
+        flex-direction: column;
+        align-items: center;
+    }
+    .container-text-sb-1{
+        width: 70%;
+    }
+    .container-text-sb-1 p{
+        margin-top: 0%;
+        margin-bottom: 10%;
+        margin-inline: 0%;
+    }
+    .container-sb-2{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .imagem2{
+        width: 85vw;
+        height: 45vw;
+        object-fit: cover;
+        object-position: 50% 30%;
+    }
+    .container-text-sb-2 {
+        width: 100%;
+    }
+}
+
+/* 
+---------------------------------------------------------------------- */
+
+
+
+.btn-sobre {
+    font-family: 'poppins';
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0.75em 5rem;
+    margin-top:20px;
+    border-radius: 0.4em;
+    border: none;
+    outline: none;
+    color: white;
+    background-color: var(--color-03);
+    cursor: pointer;
+    transition: background-color 0.1s;
+    transform: scale(1, 1);
+    transition: transform 0.1s;
+}
+
+.btn-sobre:hover {
+    background-color: var(--color-05);
+   transform: scale(1.01, 1.01);
+}
+
+.filtro{
+    font-size: 12px;
+    font-family: 'chillax';
+    font-weight: bold;
+    padding: 0.5em 2em;
+    margin: 0.25em;
+    border-radius: 0.8em;
+    border: none;
+    outline: none;
+    color: white;
+    background-color: #1C5841;
+    cursor: pointer;
+}
+
+.filtro:hover {
+    background-color: #58ffc2;
+}
+.grade1{
+    background-color: #F5E0A5;
+    height: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    padding: 100px;
+}
+
+
+
+.grade2{
+    background-color: #1C5841;
+    height: 800px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    padding: 100px;
+    flex-wrap: nowrap;
+
+}
+
+.texto2{
+    font-size: 25px;
+    color: white;
+    padding-right: 20%;
+}
+.botao_plano{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.estilo_botao{
+    font-size: 35px;
+    font-family: 'chillax';
+    font-weight: bold;
+    padding: 0.5em 2em;
+    margin: 0.25em;
+    border-radius: 0.8em;
+    border: none;
+    outline: none;
+    color: white;
+    background-color: #D46240;
+    cursor: pointer;
+
+}
+.estilo_botao:hover{
+    background-color: #F5E0A5;
+    cursor: pointer;
+    color: black;
+}
+
+
+
+
+.atri-sect{
+    background-color: #002b0b; 
+    height: 100%; 
+    width: 100%;
+}
+
+.atri-sect-body{
+    display: flex; 
+    flex-direction: column; 
+    padding: 10px; 
+    flex-grow: 1; 
+    flex-wrap: wrap;}
+
+.atri-sect-body a {
+    font-size: 15px;
+    text-decoration: none;
+    color: white;
+}
+
+.atri-sect-body a > *, .atri-sect-body a > *::before{
+    color: white;
+    text-decoration: none;
+    transition: color 0.1s;
+}
+.atri-sect-body a:hover {
+    text-decoration: none;
+    color: #05A269;
+}

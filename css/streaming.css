@@ -1,0 +1,146 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+    color:#000;
+}
+:root{
+    --color-01:#F8A764;
+    --color-01-hover:#f59444;
+    --color-02:#F5E0A5;
+    --color-03:#1C5841;
+    --color-04:#00AD6E;
+    --color-05:#D46240;
+    --font-01:#FFFFFF;
+    --font-02:#16120D;
+    --btn-alerta:#8D2000;
+}
+
+/* Area de chamda do psicologo */
+.section-stream{
+    display: flex;
+    flex-direction: row;
+}
+.container-psi{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    height: 100%;
+}
+.container-ajusts{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 7rem;
+}
+.input-stream{
+    padding: 1rem;
+    color: var(--btn-alerta);
+    background: var(--color-03);
+}
+.container-input img{
+    width: 20px;
+    filter: invert(1);
+}
+.container-input {
+  background-color: var(--color-03);
+  padding-inline: 12px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  height: fit-content;
+  gap: 8px;
+  margin: 1rem;
+}
+.input-stream {
+  -webkit-appearance: none;
+  appearance: none;
+  background: var(--color-03);
+  outline: none;
+}
+/* Linha (thumb) para WebKit (Chrome, Safari) */
+.input-stream::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 4px;
+  height: 4px;
+  background: white;
+  cursor: pointer;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+  margin-top: -4px;
+}
+/* Bolinha (thumb) para WebKit (Chrome, Safari) */
+.input-stream::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 12px;
+  height: 12px;
+  background: white;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+  margin-top: -4px;
+}
+/* Bolinha (thumb) para Firefox */
+.input-stream::-moz-range-thumb {
+  width: 4px;
+  height: 4px;
+  background: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-top: -4px;
+}
+.btns-stream{
+    margin: 1rem;
+}
+.btns-stream button{
+    padding: 1rem;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    margin-right: 0.5rem;
+}
+.btns-stream button:hover{
+    filter: contrast(1.5);
+    cursor: pointer;
+}
+.btn-camera, .btn-microfone{
+    background-color: var(--color-04);
+}
+.btn-recusar{
+    background-color: #D46240;
+}
+.img-camera,.img-microfone{
+    width: 30px;
+    filter: invert();
+}
+.img-recusar{
+    width: 50px;
+}
+.container-paciente{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+}
+#img-psi{
+    width: 100%;
+    height: 29rem;
+    object-fit: contain;
+    border-radius: 12px;
+    border: 1px solid black;
+    background-color: #fafafa;
+}
+#img-paciente{
+    width: 80%;
+    height: 12rem;
+    object-fit: contain;
+    border-radius: 12px;
+    border: 1px solid black;
+    background-color: #fafafa;
+}

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/navbar.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/style_perfil.css">
+    <link rel="stylesheet" href="/css/style_calendar.css">
+    <link rel="stylesheet" href="/css/style-perfil-psicologo.css">
+    <link rel="stylesheet" href="../bootstrap-4.1.3-dist/css/bootstrap.min.css">
+    <script type="text/javascript" src="../bootstrap-4.1.3-dist/js/bootstrap.min.js"></script>
+
+    <title>Perfil</title>
+
+    <script src="/scripts/scroll.js"></script>
+    <script src="/scripts/utilites.js" defer></script>
+    <script type="module" src="/scripts/login_app.js" defer></script>
+    <script type="text/javascript" src="/scripts/nav.js" defer></script>
+
+
+    <!-- <script>
+        usuario = JSON.parse(sessionStorage.getItem('mind_user'))
+        if (usuario === null) {
+            window.location.href =  window.location.href.replace("perfil-paciente.html","") + "login.html"
+        }
+    </script> -->
+    
+
+
+</head>
+<body onload="changePerfilData()">
+    <header id="masterNav">
+        <nav class="nav-main-grid">
+            <div class="cont-nav-left"> 
+                <a id="mindHome" href="">
+                    <img src="/img/logo_p3.png" class="logo_size" alt="logo" style="cursor: pointer;"/>
+                </a>
+            </div>
+            <div class="cont-nav-center">
+
+            </div>
+            <div class="cont-nav-right">  
+                <div class="nav-right-buttons">
+
+                </div>
+            </div>
+        </nav>
+            <div id="sideNav">
+            </div>
+    </header>
+
+
+    <section class="section">                
+        <div class="card-perfil-main">
+            <div class="card-perfil-content">
+                <div class="foto-perfil">
+                    <img id="perfilFoto" src="/img/cliente_ex.png">
+                </div>
+                <div>
+                    <h3 id="perfilNome">Nome Sobrenome</h3>
+                    <p id="perfilIdade">Idade:  </p>
+                    <p id="perfilLocal">Local:  </p>
+                    <p id="perfilCRP">CRP:</p>
+                </div>
+            </div>
+            <div class="card-perfil-settings">
+                <div>
+                    <div class="contato">
+                        <button type="button" class="perfil-btn" onclick="copyNumber()"><img src="../img/call_icon.svg" alt="telefone">
+                        </button>
+                        <span id="cell-n">+55 11 9000-0000</span>
+                    </div>
+                    <br>
+                    <div class="contato">
+                        <button type="button" class="perfil-btn"><img src="../img/mail_icon.svg" alt="email"></button>
+                        <span id="email-n">snoopy@gmail.com</span>
+                    </div>
+                </div>
+                <div class="settings">
+                    <button class="setting"><a href="./adicionar-artigos.html">Criar artigo</a></button>
+                    <button class="setting"><a href="./configuracoes-psicologo.html">Configurações</a></button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container-perfil-row-2">
+            <div class="calendar">
+                <div class="cabecalho">
+                    <h1>Outubro</h1>
+                    <nav class="controllers">
+                        <div id="anterior"><img src="../img/icons/arrow_down.svg" alt="seta para esquerda"></div>
+                        <div id="proximo"><img src="../img/icons/arrow_down.svg" alt="seta para direita"></div>
+                    </nav>
+                </div>
+                <div class="calendar-inside">
+                    <ul class="calendar-week">
+                        <li class="dia-cabecalho">Dom</li>
+                        <li class="dia-cabecalho">Seg</li>
+                        <li class="dia-cabecalho">Ter</li>
+                        <li class="dia-cabecalho">Qua</li>
+                        <li class="dia-cabecalho">Qui</li>
+                        <li class="dia-cabecalho">Sex</li>
+                        <li class="dia-cabecalho">Sáb</li>
+                    </ul>
+                    <ul class="dias-do-calendario">
+                    
+                    </ul>
+                </div>
+            </div>
+            <div class="infos">
+                <div class="card-info-container">
+                    <h3>Sobre mim</h3>
+                    <div class="card-sobre-container"></div>
+                </div>
+                <div class="card-info-container">
+                    <h3>Especializações</h3>
+                    <div class="card-sobre-container"></div>
+                </div>
+                <div class="card-info-container">
+                    <h3>Horários de atendimento</h3>
+                    <div class="card-horarios">
+                        <span id="span-dia">Segunda-feira</span>
+                        <span id="span-hr1">09:00</span>
+                        <span id="span-hr2">09:00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-notif-container">
+            <h1 class="notif-titulo">Notificações</h1>
+            <div class="notificacoes">
+                <div>
+                    <div class="card-notif-session" id="notifSide">
+                        <p>Sessão do dia 25/10 <br>começa ás 18:00</p>
+                        <a href="stream-terapia.html">
+                            <button class="card-notif-btn" onclick="setTerapia(1)">Entrar</button>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <div class="card-notif-session agendamento" id="agendamento">
+                        <div class="bell">
+                            <p>Solicitação de agendamento: 11/10/2024</p>
+                        </div>
+                        <button class="card-notif-btn" id="abrir-notif">Confirmar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- pop-up-psicologo------------------------------------------------ -->
+         <div class="container-pop-up-agendarConsulta" style="display: none;">
+            <div class="solicitacao">
+                <h4>Solicitação de agendamento de Andrew Garfield</h4>
+                <div class="container-btn-fechar">
+                    <button id="pop-up-fechar"><img src="/img/cancel.png" class="pop-up-img-fechar"></button>
+                </div>
+            </div>
+            <div class="container-imagem-info">
+                <div class="container-imagem">
+                    <img src="/img/psi_3.png" alt="" id="pop-up-img">
+                </div>
+                <div class="container-info">
+                    <h1 id="pop-up-name">Nome Sobrenome</h1>
+                    <span id="pop-up-idade">Idade:</span>
+                    <span id="pop-up-local">Local:</span>
+                </div>
+            </div>
+            <div class="container-sobre-mim">
+                <span>Sobre mim:</span>
+                <span  type="text" id="pop-up-sobre-mim"></span>
+            </div>
+            <div class="container-aceitar-recusar">
+                <button class="btn-recusar">Recusar</button>
+                <span>Esta solitação foi feita em 12/05/2025 ás 16:02. Aceita o pedido desse paciente?</span>
+                <button class="btn-aceitar">Aceitar</button>
+            </div>
+            <div class="container-consultas">
+                <div class="container-card-horarios">
+                    <div class="card-horarios">
+                        <span id="span-dia">Segunda-feira</span>
+                        <span id="span-hr1">09:00</span>
+                        <span id="span-hr2">09:00</span>
+                    </div>
+                </div>
+            </div>
+         </div>
+    </section>
+
+    <footer id="mainFooter">
+    </footer>
+
+    <script src="/scripts/pop-up-psi.js" defer></script>
+    <script src="/scripts/calendar.js" defer></script>
+</html>

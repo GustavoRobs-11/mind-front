@@ -1,0 +1,132 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+:root{
+    --color-01:#F8A764;
+    --color-01-hover:#f59444;
+    --color-02:#F5E0A5;
+    --color-03:#1C5841;
+    --color-04:#00AD6E;
+    --color-05:#D46240;
+    --font-01:#FFFFFF;
+    --font-02:#16120D;
+    --btn-alerta:#8D2000;
+}
+
+/* Artigos ----------------------------------- */
+.artigo-sect{
+    display: flexbox;
+    justify-self: center;
+    height: 100%;
+    margin:10px;
+}
+
+/* Titulo e subtitulo -------- */
+.artigo-sect h1{
+    font-size:clamp(1.1rem, 6vw, 2.6rem);
+}
+.artigo-sect h2{
+    font-size: 1rem;
+}
+.visible > h3{
+    font-size: clamp(.9rem, 60vw , 1rem);
+}
+.artigo-sect hr{
+    background-color: #474747c5;
+    width: 100%;
+    margin-right:10px;
+}
+
+/* Container de artigos ------- */
+.artigos{
+    display:flex;
+    flex-wrap: wrap;
+    gap:20px;
+    justify-content: center;
+}
+.artigo-container{
+    display:flex;
+    flex-direction: row;
+    height: 100%;
+    background-color: var(--color-02);
+    border-radius: 1em;
+    padding:15px;
+    gap:20px;
+    width:clamp(100px, 80vw, 500px);
+}
+.artigo-container img{
+    width:clamp(100px, 20vw, 150px);
+    height: clamp(100px, 20vw, 150px);
+    border-radius: 10px;
+    object-fit: cover;
+}
+.artigo-texto > div{
+    display: flex;
+    height:clamp(100px, 2vw, 150px);
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap:15px;
+}
+.artigo-texto > div > h3{
+    color:var(--font-02);
+    font-weight: 500;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+}
+.artigo-texto > p {
+    font-size: clamP(.8rem, 2vw, 1rem);
+    margin-top:40px;
+    text-decoration: none;
+    color: var(--font-02);
+    display:none;
+}
+.artigo-texto > p > *, .artigo-texto > p > *::before{
+    color: var(--color-03);
+    text-decoration: underline;
+    transition: color 0.1s;
+}
+
+/* Botões ---------------------------------- */
+.artigo-btn{
+    font-family: 'poppins';
+    font-size: clamp(.8rem, 2vw, 1rem);
+    text-decoration: none;
+    width:clamp(68px, 8vw, 80px);
+    padding:5px 0;
+    background-color: var(--color-03);
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    color: var(--font-01);
+    cursor: pointer;
+    transform: translate(0px, 0px) scale(1.0);
+}
+.artigo-btn:hover{
+    background-color: var(--color-04);
+}
+.artigo-btn:focus{
+    outline: none;
+    transition: transform 0.25s;
+    transition: box-shadow 0.1s;
+}
+.artigo-btn.clicked{
+    transform: translate(3px, -3px) scale(1.05);
+    transition: transform 0.25s;
+}
+
+@media(max-width:698px){
+    .artigo-container{
+         width:100%;
+    }
+    .artigo-texto > p {
+        margin-left:-110px;
+    }
+    section{
+        margin:0;
+    }
+    .artigo-texto > div{
+        justify-content: flex-start;
+    }
+}

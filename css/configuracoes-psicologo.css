@@ -1,0 +1,124 @@
+:root{
+    --color-01:#F8A764;
+    --color-01-hover:#f59444;
+    --color-02:#F5E0A5;
+    --color-03:#1C5841;
+    --color-04:#00AD6E;
+    --color-05:#D46240;
+    --font-01:#FFFFFF;
+    --font-02:#16120D;
+    --btn-alerta:#8D2000;
+}
+
+/* --------------------------------------------------*/
+.container-sobre-mim textarea{
+    height: 200px;
+}
+/* especializações-----------------------------------*/
+.input-tags {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    min-height: 46px;
+    cursor: text;
+}
+
+.input-tags input {
+    border: none;
+    outline: none;
+    flex-grow: 1;
+    padding: 5px;
+    min-width: 100px;
+    font-size: 16px;
+}
+
+.tag {
+    margin: 3px;
+    display: flex;
+    align-items: center;
+    background-color: var(--color-03);
+    font-size: .7rem;
+    color: var(--font-01) !important;
+    border-radius:5px;
+    padding:2px 6px;
+}
+
+.tag span {
+    margin-left: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.autocomplete-sugestoes {
+    position: absolute;
+    background-color: white;
+  
+    width: 300px;
+    max-height: 150px;
+    overflow-y: auto;
+    z-index: 10;
+}
+
+.autocomplete-sugestoes div {
+    padding: 8px;
+    cursor: pointer;
+}
+
+.autocomplete-sugestoes div:hover {
+    background-color: #eee;
+}
+/*atendimento------------------------------------ */
+.container-agendamento{
+    margin-top: 1rem;
+    display: flex;
+    width: 100%;
+    gap: 10px;
+    justify-content: center;
+}
+.container-agendamento select, .container-agendamento input, .container-checkbox{
+    width: 100%;
+    height: 40px;
+    font-size: 1rem;
+    padding:5px;
+    border-radius: 12px;
+    border: 1px solid #ccc;
+}
+.container-checkbox{
+    display: flex;
+    align-items: center;
+    gap:20px;
+    border:none;
+}
+.container-checkbox img, .container-checkbox input{
+    width: 15px;
+    height: 15px;
+}
+.container-checkbox img{
+    filter: invert(1);
+}
+.btn-adicionar{
+    margin-top: 1rem;
+    border: none;
+    background-color: var(--color-03);
+    border-radius: 10px;
+    padding: 0.5rem 1rem;
+    color: var(--font-01);
+    cursor: pointer;
+    box-shadow: 0px 0px 8px -5px #000;
+    width: max-content;
+}
+.btn-adicionar:hover{
+    background-color: var(--color-04);
+}
+.input-tags{
+    border: 1px solid #ced4da;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+.input-tags:focus-within{
+    outline: 0;
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, .25);
+}

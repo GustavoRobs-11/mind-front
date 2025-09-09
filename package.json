@@ -1,0 +1,33 @@
+{
+  "dependencies": {
+    "bootstrap-icons": "^1.11.3",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "multer": "^1.4.5-lts.2",
+    "mysql2": "^3.14.1",
+    "sequelize": "^6.37.7",
+    "sqlite3": "^5.1.7"
+  },
+  "name": "my-sequelize-app",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "node server/server.js",
+    "db:server": "node server/server.js",
+    "seed:paciente": "node server/scripts/createDefaultUsers.js",
+    "paciente": "node server/scripts/createDefaultUsers.js",
+    "db:paciente": "node server/scripts/createDefaultUsers.js",
+
+    "psicologo": "node server/scripts/createDefaultPsicologos.js",
+
+    "artigo": "node server/scripts/createDefaultArtigos.js",
+
+
+    "db:drop": "node server/scripts/dropDatabase.js",
+    "drop": "node server/scripts/dropDatabase.js",
+    "break": "node server/scripts/dropDatabase.js",
+
+    "start": "node server/scripts/createDefaultUsers.js && node server/scripts/createDefaultPsicologos.js && node server/scripts/createDefaultArtigos.js && node server/server.js"
+  }
+}

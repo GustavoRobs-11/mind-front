@@ -1,0 +1,190 @@
+.calendar {
+    transition: background 0.9s;
+    margin: 1em;
+    margin-bottom: 0;
+    padding-bottom: 15px;
+    border-radius: 20px;
+    width: inherit;
+    height: inherit;
+}
+.calendar h1 {
+    padding-left: 20%;
+    justify-self: flex-start;
+    color: white;
+    font-family: 'chillax';
+    font-size: 30px;
+
+    padding-top: 5%;
+    transition:  color 0.2s;
+}
+
+.calendar h1.constrast{
+    color: black;
+    transition: color 0.2s;
+}
+
+.calendar nav {
+    display: flex;
+    justify-content: right;
+    color: white;
+    padding-top: 5%;
+    padding-right: 10%;
+
+}
+
+
+.calendar-inside {
+    background-color: white;
+    padding-top: 0.5em;
+    margin-inline: 5%;
+    padding-bottom: 5px;    border-radius: 20px;
+    
+    width: inherit;
+    height: inherit;
+}
+
+
+.calendario {
+    margin-inline: 1em;
+    padding-top: 1em;
+    margin-bottom: 1em;
+    height: 90%;
+    position: relative;
+}
+
+
+.calendario ul{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 0.25em;
+    list-style: none;
+    text-align: center;
+}
+
+.calendario ul li{
+    font-size: 20px;
+    position: relative;
+}
+
+#anterior, #proximo{
+    width: 35px;
+    height: 35px;
+    position: relative;
+    top: 50%;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    outline: none;
+}
+
+#anterior::before, #proximo::before{
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    top: 50%;
+    left: 50%;
+    border-style: solid;
+    border-radius: 20%;
+    border-color: white;
+    transition: border-color 0.5s;
+    border-width: 0.5em 0.5em 0 0;
+}
+
+#anterior::before{
+    transform: translate(-50%, 50%) rotate(-135deg);
+}
+
+#proximo::before{
+    transform: translate(-50%, 50%) rotate(45deg);
+}
+
+#proximo:hover::before, #anterior:hover::before{
+    border-color: rgb(9, 104, 0);
+    transition: border-color 0.2s;
+}
+
+#proximo:active::before, #anterior:active::before{
+    border-color: rgb(104, 255, 104);
+    transition: border-color 0s;
+}
+
+.dia-cabecalho {
+    padding-top: 10px;
+    text-align: center;
+    font-family: 'chillax';
+    flex-grow: 2;
+    border-radius: 5px;
+    border: 3px solid #ffffff;
+    background: #ffffff;
+    color: #fff;
+    font-weight: bold;
+    cursor:default;
+
+    transition: background 0.2s;
+}
+
+.dia-cabecalho.constrast{
+    color: black;
+    transition: color 0.2s;
+}
+
+.dia{
+    text-align: center;
+    font-weight: bold;
+    max-height: inherit;
+    border-radius: 5px;
+    background-color: #fafafa;
+    outline: 1px solid #cfcfcf;
+    padding: 10%;
+
+    transform: none;
+    box-shadow: none;
+    transition: transform 0.1s;
+}
+
+.dia:hover{
+    background-color: white;
+    cursor: pointer;
+    transform: translate(1px,-1px) scale(1);
+    box-shadow: -1px 1px rgb(3, 70, 35);
+}
+
+.dia-hoje{
+    background-color: #F8A764;
+    outline: 2px solid #F8A764;
+    outline-offset: 1px;
+    border-radius: 5px;
+
+}
+
+.dia-hoje:hover {
+    background-color: #ffb77d;
+
+    transform: translate(1px,-1px) scale(1);
+    box-shadow: none
+}
+
+
+.dia-invalido {
+    text-align: center;
+    font-weight: bold;
+    max-height: inherit;
+    border-radius: 5px;
+    color: #6b6b6b;
+   
+    outline: 1px solid #e0e0e0;
+    padding: 10%;
+    background: white;
+    transition: background 0.5s;
+}
+
+
+
+.dia-invalido:hover{
+    background-color: #ff857c;
+    cursor: not-allowed;
+
+    transform: translate(1px,-1px) scale(1);
+    box-shadow: -1px 1px rgb(70, 3, 20);
+}

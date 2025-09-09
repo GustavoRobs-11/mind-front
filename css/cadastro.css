@@ -1,0 +1,150 @@
+.cadastro{
+    background-color: #F5E0A5;
+    width: 1200px;
+    height: 500px;
+    border-radius: 60px;
+    position: absolute;
+    left: 20%;
+    bottom: 30%;
+    top: 30%;
+}
+.botoes{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px;
+}
+.info{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-left: 15%;
+    padding-right: 15%;
+    gap: 30px;
+}
+.caixa{
+    display: flex;
+    flex-direction: column;
+}
+
+.btn-confirmar{
+    font-size: 12px;
+    font-family: 'chillax';
+    font-weight: bold;
+    padding: 0.5em 2em;
+    margin: 0.25em;
+    border-radius: 0.8em;
+    width: 60px;
+    border: none;
+    outline: none;
+    color: white;
+    background-color: #1C5841;
+    cursor: pointer;
+}
+
+.filtro:hover {
+    background-color: #1b9e6e;
+}
+.cadastrar{
+    display: flex;
+    justify-content: end;
+    padding-right: 15%;
+    padding-top: 40px;
+    align-items: center;
+    gap: 30px;
+}
+.psicologo{
+    font-size: 12px;
+    font-family: 'chillax';
+    font-weight: bold;
+    padding: 0.5em 2em;
+    margin: 0.25em;
+    border-radius: 0.8em;
+    border: none;
+    outline: none;
+    color: white;
+    background-color: #1C5841;
+    cursor: pointer;
+    width: 250px;
+    height: 50px;
+}
+.voluntario{
+    font-size: 12px;
+    font-family: 'chillax';
+    font-weight: bold;
+    padding: 0.5em 2em;
+    margin: 0.25em;
+    border-radius: 0.8em;
+    border: none;
+    outline: none;
+    color: white;
+    background-color: #05A269;
+    cursor: pointer;
+    width: 250px;
+    height: 50px;
+}
+.paciente{
+    font-size: 12px;
+    font-family: 'chillax';
+    font-weight: bold;
+    padding: 0.5em 2em;
+    margin: 0.25em;
+    border-radius: 0.8em;
+    border: none;
+    outline: none;
+    color: black;
+    background-color: #F8A764;
+    cursor: pointer;
+    width: 250px;
+    height: 50px;
+}
+
+@keyframes slideUp {
+    0% {
+      transform: translateY(10%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+}
+
+.card-3{
+    text-decoration: none;
+    width: 325px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 2px 8px #6e6e6e;
+    margin: 80px;
+    margin-inline: 20px;
+    padding-top: 20px;
+    height: 400px;
+    animation: 0.3s ease-out 0s 1 slideUp;
+    transition: transform 0.2s;
+    transition: filter 0.2s;
+}
+
+.card-3:hover{
+    filter: brightness(110%);
+    transform: translate(0, -3px) scale(1.01, 1.01);
+    transition: transform 0.2s;
+
+}
+
+.card-3-content{
+    display: flexbox;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    padding: 35px;
+    margin-bottom: 5px;
+}
+
+.card-3-content h1{
+    color: white;
+
+}
+

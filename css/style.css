@@ -1,0 +1,471 @@
+@font-face {
+    font-family: 'poppins';
+    src: url('../fonts/Font_Poppins/Poppins-Medium.ttf') format('truetype'),
+    url('../fonts/Font_Poppins/Poppins-Black.ttf') format('truetype'),
+    url('../fonts/Font_Poppins/Poppins-ExtraBold.ttf') format('truetype'),
+    url('../fonts/Font_Poppins/Poppins-Bold.ttf') format('truetype'),
+    url('../fonts/Font_Poppins/Poppins-Light.ttf') format('truetype'),
+    url('../fonts/Font_Poppins/Poppins-ExtraLight.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+*{
+    font-family: 'poppins';
+    font-size: medium;
+}
+:root{
+    --color-01:#F8A764;
+    --color-01-hover:#f59444;
+    --color-02:#F5E0A5;
+    --color-03:#1C5841;
+    --color-04:#00AD6E;
+    --color-05:#D46240;
+    --font-01:#FFFFFF;
+    --font-02:#16120D;
+}
+/* Nav and footer styles */
+header{
+    z-index: 22;
+}
+body, html{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+
+}
+
+footer {
+    padding-top: 5em;
+    background-image: linear-gradient(to bottom, #F8A764, #eba161 75%);
+
+    outline: 2px solid #F8A764;
+    min-height: -webkit-fit-content;    min-height: -moz-fit-content;    min-height: fit-content; 
+
+    margin-bottom: 0;
+    padding-bottom: 0.5vh;
+
+}
+
+footer > div{   
+    display: inline-block;
+    flex-direction: row;
+}
+
+footer hr{
+    height: 1px;
+    background-color: black;
+    width: 90%;
+    border-radius: 25%;
+}
+
+.grid-footer{
+    min-height: -webkit-fit-content;    min-height: -moz-fit-content;    min-height: fit-content; 
+    display: grid;
+    max-width: 60%;
+    margin-inline: auto;
+    grid-template-columns: 50% 50%;
+    column-gap: 15em;
+    flex-grow: 1;
+
+
+}
+@media(max-width:640px){
+    .grid-footer { display: block;}
+}
+
+.grid-footer div{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-bottom: 25px;
+}
+
+footer a, footer p {
+    color: black;
+    text-decoration: none;
+    height: 30px;
+}
+
+footer a:hover, footer p:hover {
+    color: rgb(63, 58, 48);
+    text-decoration: none;
+    cursor: pointer;
+    
+}
+
+.footer-logo {
+    font-family: 'poppins';
+    font-size: larger;
+    display: flex; 
+    justify-content: center;
+}
+
+.footer-logo:hover{
+    color: rgb(63, 58, 48);
+    cursor: default;
+    margin-bottom: 15px;
+}
+
+
+.nav-btn-login {
+    font-family: 'poppins';
+    font-size: medium;
+    font-weight:500;
+    padding: 0.6em 4em;
+    margin: 0.4em;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    color: white;
+    background-color: #1C5841;
+    cursor: pointer;
+
+}
+
+.nav-right-container{
+    width: 100%;
+    z-index: 111;
+}
+
+
+.nav-btn-login:hover{
+    background-color: #00AD6E;
+    outline: 2px solid ;
+}
+
+.nav-login-drop {
+    font-family: 'poppins';
+    font-size: medium;
+    font-weight:500;
+    margin: 0.75em;
+    margin-top: 0.5em;
+    padding: 0.5em;
+    width: inherit;
+    min-height: fit-content;
+    border-radius: 0.4em;
+    border: none;
+    outline: none;
+    color: white;
+    background-color: #1C5841;
+    transform: translateY(5px);
+    transition: background-color 0.5s;
+    cursor: pointer;
+    z-index: 111;
+
+}
+
+.nav-login-drop-wrapper{
+    height: inherit;
+    margin: -5%;
+    transform: translateY(-5px);
+}
+
+.nav-login-drop a:hover{
+    text-decoration: none;
+}
+
+.nav-drop-btn{
+    display: flex;
+    justify-content: start;
+    font-family: 'poppins';
+    font-size: medium;
+    text-decoration: none;
+    font-weight:500;
+    margin: 0.5em;
+    padding: 0.2em 1em;
+    background: transparent;
+    width: 80%;
+    border: none;
+    outline: none;
+    color: white;
+    cursor: pointer;
+    transition: color 0.25s;
+}
+
+.nav-drop-btn:hover{
+    color: #ceffed;
+    transition: color 0.15s;
+}
+
+.nav-btn{
+    
+    background-size:  1.5em;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0.4em;
+    border-radius: 0.4em;
+
+    border: none;
+    outline: none;
+
+    width: 3.0em;
+    height: 2.5em;
+
+    background-color: #1C5841;
+    transition: background-color 0.5s;
+    cursor: pointer;
+}
+
+.nav-btn-box{
+    width: 2.3em;
+    height: 2.3em;
+
+    background-color: wheat;
+    transition: background-color 0.5s;
+    cursor: pointer;
+}
+
+.nav-btn:hover{
+    background-color: var(--color-04);
+    transition: background-color 0.1s;
+}
+
+.nav-btn-box:hover{
+    background-color: rgb(255, 218, 151);
+    transition: background-color 0.1s;
+}
+
+.nav-btn-logout{
+    background-color: #f35a02;
+}
+
+.nav-btn-logout:hover {
+    background-color: #ff5858;
+    transition: background-color 0.1s;
+}
+
+.nav-btn-cancel{
+    background-color: #008528;
+}
+.nav-btn-cancel:hover{
+    background-color: #ff2e2e;
+    transition: background-color 0.1s;
+}
+
+.btn-circle{
+    width: fit-content;
+    height: fit-content;
+    min-width: 45px;
+    min-height: 45px;
+    padding: 1em 1em;
+    border-radius: 50%;
+
+}
+
+.to_right {
+    display: flex;
+    justify-content: right;
+}
+
+.logo_size {
+    width: 6rem;
+
+}
+
+.grid-item:nth-child(2) {
+    grid-column: 3;
+  }
+
+#masterNav{
+    margin: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.nav-main-grid{
+    background-color: #fffaecd8;
+    display: grid;
+    grid-template-columns: max-content auto min-content;
+    padding-top: 10px;
+    padding-inline: 30px;
+    height: 65px;
+}
+
+/* trava a rolagem da tela quando o side bar aparece*/
+
+.nav-main-grid.lock{
+    z-index: 999;
+    position: relative;
+}
+
+#sideNav{
+    overflow-x: hidden;
+    position: relative;
+}
+
+#sideNav.lock{
+    height: 100vh;
+    overflow-y: hidden;
+    position: absolute;
+    width: 100vw;
+    top: 0;
+
+}
+
+.cont-nav-left {
+    display: flex; 
+    padding-bottom: 0.75em; 
+    min-width: fit-content;
+}
+
+.cont-nav-center {
+    display: grid; 
+    grid-template-columns: auto auto auto;
+    gap: 30px;
+    min-width: max-content;
+    justify-content: flex-end;
+    padding-top: 0.35em
+}
+
+.cont-nav-center.null {
+    gap: 0;
+    min-width: max-content;
+    padding-top: 0.35em
+}
+
+.cont-nav-right{
+    width: inherit;
+    display: flex; 
+    justify-content: flex-end;
+    transform: translateY(-5px);
+    
+}
+
+
+.nav-side-bar{
+    display: block;
+    z-index: 11111;
+    display: inline;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #FFFAEC;
+    width: 400px;
+    max-width: 90%;
+    height: 100vh;
+    overflow-x: hidden;
+    
+    padding: 1.2em;
+    border-top-left-radius: 30px;
+    overflow: hidden;
+    margin-bottom: 0;
+    border-left: 2px solid  #F8A764;
+    transform: translateX(100%);
+
+
+
+}
+@keyframes moveNavToLeft {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+}
+
+.nav-side-bar.active{
+    transform: translateX(100%);
+    animation: moveNavToLeft 0.5s forwards;
+}
+
+.nav-side-bar.deactive{
+    animation: moveNavToRight 0.5s forwards;
+    
+}
+
+@keyframes moveNavToRight {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+
+
+
+#nav-background-color-change.active{
+    background-color: rgb(192, 218, 186);
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 11;
+    animation: backgroundNavColorChange 0.5s forwards;
+
+}
+
+#nav-background-color-change.deactive{
+    z-index: 11;
+    animation: backgroundNavColorChangeBack 0.5s forwards;
+}
+
+@keyframes backgroundNavColorChange {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0.3;
+    }
+  }
+
+  @keyframes backgroundNavColorChangeBack {
+    0% {
+        opacity: 0.3;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.nav-side-bar-items{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 90%;
+    margin-top: 30px;
+    padding-left: 20px;
+    gap: 20px;
+}
+
+.nav-right-buttons{
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 20px;
+    grid-template-rows: 15px;
+    margin-left: 100%;
+    justify-items: flex-end;
+    flex-direction: column;
+    grid-auto-flow: dense;
+    outline: none;
+}
+
+.nav-right-buttons > *{
+    text-decoration: none;
+
+}
+
+
+.nav-right-buttons *:focus{
+    outline: none;
+}
+
+nav .nav-item{
+    color: black;
+    transition: color 0.5s;
+    font-family: 'poppins', sans-serif;
+
+}
+nav .nav-item:hover{
+    color: var(--color-04);
+    transition: color 0.1s;
+
+}
+

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="./css/landingPage.css">
+        <link rel="stylesheet" href="bootstrap-4.1.3-dist/css/bootstrap.min.css">
+        <script type="text/javascript" src="./bootstrap-4.1.3-dist/js/bootstrap.min.js"></script>
+        <script src="./scripts/scroll.js"></script>
+
+        <script type="module" src="/scripts/login_app.js" defer></script>
+        
+        <script type="text/javascript" src="/scripts/utilites.js" defer></script>
+        <script type="text/javascript" src="/scripts/nav.js" defer></script>
+    
+        <script type="text/javascript" src="./bootstrap-4.1.3-dist/js/bootstrap.min.js"></script>
+        <title>Mind</title>
+    
+    </head>
+<body onload="local()">
+    <header id="masterNav">
+        <nav class="nav-main-grid">
+            <div class="cont-nav-left"> 
+                <a id="mindHome" href="">
+                    <img src="/img/logo_p3.png" class="logo_size" alt="logo" style="cursor: pointer;"/>
+                </a>
+            </div>
+            <div class="cont-nav-center">
+
+            </div>
+            <div class="cont-nav-right">  
+                <div class="nav-right-buttons">
+
+                </div>
+            </div>
+        </nav>
+            <div id="sideNav">
+            </div>
+    </header>
+
+    <section class="hero-section">
+        <div class="presentation-hero">
+            <h1><span>Mind</span>... your mind</h1>
+            <p>A plataforma que tem <br>cuidado com a sua saúde mental diária</p>
+            <button id="btn-hero" onclick="scrollToPos()"><a href="#scroll-tgt" style="text-decoration:none; color:#fff;">Ver planos</a></button>
+        </div>
+        <div id="bg-main"></div>
+    </section>
+
+    <section class="grid-container">              
+            <div>
+                <img src="./img/landingPage-img/home_img_2.png" class="home-img-size_2">
+            </div>
+            <div class="text-side">
+                <div>
+                    <p class="home_text">
+                        Aqui nossa missão é tornar o cuidado psicológico acessível a todos, 
+                        oferecendo uma plataforma intuitiva que conecta você a psicólogos qualificados, 
+                        de forma simples e segura.
+                    </p>
+                </div>          
+                <div class="desc">
+                    <a href="./pages/sobrenos.html"><button type="button" class="btn-orange">Conheçer</button></a>
+                    <p>Conheça nossa plataforma:</p>    
+                </div>
+            </div>
+    </section>
+
+    <section id="scroll-tgt"  class="container-plans">
+        <div class="cards">
+            <div class="card-title">
+                <h1>Acolhimento</h1>
+                <h2>R$ <span>50</span>/ por sessão</h2>
+            </div>
+            <div class="card-topics">
+                <ul> 
+                    <li>Sessões de acolhimento para alívio de angustias e tensões do dia a dia; </li>
+                    <li> Recepção de curta duração de no máximo 30 minutos. </li>
+                </ul>
+            </div>
+            <button class="btn">Assinar</button>
+        </div>
+
+        <div class="cards">
+            <div class="card-title">
+                <h1>Sessões <br> psicológicas</h1>
+                <h2>R$<span>90</span>/ mês</h2>
+            </div>
+            <div class="card-topics">
+                <ul> 
+                    <li>Sessões que promovem acolhimento e possibilidades de transformações internas em uma abordagem profissional;</li>
+                    <li> Apoio de no mínimo 1 hora com psicologos especializados a sua escolha.</li>
+                </ul>
+            </div>
+            <button class="btn">Assinar</button>
+        </div>
+
+        <div class="cards">
+            <div class="card-title">
+                    <h1>Casal</h1>
+                <h2>R$<span>150</span>/ mês</h2>
+            </div>
+            <div class="card-topics">
+                <ul> 
+                    <li>Sessões que promovem acolhimento e possibilidades de transformações internas em uma abordagem profissional;</li>
+                    <li> Apoio de no mínimo 1 hora com psicologos especializados a sua escolha.</li>
+                </ul>
+            </div>
+            <button class="btn">Assinar</button>
+        </div>
+    </section>
+
+    <section class="container-goals">
+        <div class="goal">
+            <div>
+                <img class="bi" src="./img/icons/puzzle.svg" alt="puzzle icon">
+                <h2>Especialidades</h2>
+            </div>
+            <p>Com variadas especialidades, nossos profissionais tem como foco o aprimoramento de suas abordagens para o melhor atendimento.</p>
+        </div>
+        <div class="goal">
+            <div>
+                <img class="bi" src="./img/icons/profession.svg" alt="profession">
+                <h2>Profissionais</h2>
+            </div>
+            <p>Nossos profissionais são altamente capacitados e estão sempre inovando para proporcionar um atendimento humanizado e eficiente.</p>
+        </div>
+        <div class="goal">
+            <div>
+                <img class="bi" src="./img/icons/psychology.svg" alt="psychology thoughts">
+                <h2>Conhecimento</h2>
+            </div>
+            <p>Valorizamos o conhecimento contínuo para garantir que cada atendimento seja baseado nas melhores práticas e técnicas atualizadas.</p>
+        </div>
+        <div class="goal">
+            <div>
+                <img class="bi" src="./img/icons/care.svg" alt="taking care">
+                <h2>Cuidado</h2>
+            </div>
+            <p>O cuidado está no centro de tudo o que fazemos, garantindo que cada pessoa receba um atendimento atencioso e personalizado</p>
+        </div>
+    </section>
+
+
+    <section class="container-questions">
+        <h2>Perguntas frequentes</h2>
+        <div>
+            <button class="accordion">
+                Como funciona a terapia online?
+                <img class="bi-icon" src="./img/icons/arrow_down.svg" alt="arrow down">
+            </button>
+            <p>A terapia online funciona como uma sessão tradicional, mas ocorre através de <span style="text-decoration: underline;">videoconferência</span>. Você marca seu horário de acordo com a disponibilidade da agenda do psicologo escolhido, e se confirmado a sessão, o usuário receberá uma notificação em seu perfil da data e horário de registro, <span style="background: #f8d982;">tendo início a consulta no tempo previsto de forma automatica, juntamente a entrada do profissional no ambiente de streaming </span>, sendo este privado e confidencial. Sendo tão eficaz quanto a terapia presencial para a maioria dos casos.</p>
+        </div>
+        <div>
+            <button class="accordion">
+                Quanto tempo dura cada sessão?
+                <img class="bi-icon" src="./img/icons/arrow_down.svg" alt="arrow down">
+            </button>
+            <p>Cada sessão tem duração média de 50 minutos, que é o padrão na psicologia clínica. A frequência (semanal, quinzenal ou mensal) será combinada entre você e o terapeuta, de acordo com suas necessidades.</p>
+        </div>
+        <div>
+            <button class="accordion">
+                É realmente confidencial?
+                <img class="bi-icon" src="./img/icons/arrow_down.svg" alt="arrow down">
+            </button>
+            <p>Sim, utilizamos uma plataformas segura de apoio para videos chamadas e seguimos rigorosamente o <a href="https://www.crpsp.org/pagina/view/49" target="_blank" style="text-decoration: underline; color:#16120D;">Código de Ética Profissional</a>. Suas sessões são protegidas por sigilo profissional, com exceção apenas dos casos previstos em lei (como risco de vida).</p>
+        </div>
+        <div>
+            <button class="accordion">
+                Como sei se preciso de terapia?
+                <img class="bi-icon" src="./img/icons/arrow_down.svg" alt="arrow down">
+            </button>
+            <p>A terapia pode ajudar em diversas situações: dificuldades emocionais, estresse, ansiedade, problemas de relacionamento, luto, ou simplesmente para autoconhecimento. Consultas psicologicas são para todos e não há uma restrição de necessidades, portanto não existem "problemas pequenos demais" para uma busca profissional. Qualquer duvida, temos uma sessão de artigos e noticias para você se interar sobre o assunto, <a href="./pages/artigos.html" style="text-decoration: underline; color:#16120D;">aqui</a>.</p>
+        </div>
+    </section>
+    
+
+    <footer id="mainFooter">
+    </footer>
+
+    <script src="./scripts/faqs.js"></script>
+</body>
+</html>
