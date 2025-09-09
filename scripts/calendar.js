@@ -202,10 +202,6 @@ function atualizarHorariosModal(diaKey) {
           div.classList.add("horario","ocupado");
           div.innerText = h;
           modalHorarios.appendChild(div);
-          modalHorarios.style.display = "flex";
-          modalHorarios.style.flexWrap = "wrap";
-          modalHorarios.style.gap = "8px";
-          modalHorarios.style.paddingTop = "1rem";
         });
       } else {
         modalHorarios.innerHTML = "<p>Nenhum horário registrado</p>";

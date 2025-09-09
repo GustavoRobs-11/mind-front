@@ -79,6 +79,7 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-bottom: 15px;
 }
 
 .setting {
@@ -110,7 +111,7 @@ body {
 .semana-nav button {
     border: none;
     background: none;
-    font-size: 1rem;
+    font-size: 0.7rem;
     cursor: pointer;
     margin: 8px;
 }
@@ -135,7 +136,7 @@ body {
     padding: 4px;
     cursor: pointer;
     color: white;
-    font-size: 1rem;
+    font-size: 0.7rem;
     width: 100%;
     text-align: center;
 }
@@ -178,7 +179,7 @@ body {
     gap: 4px;
 }
 .dia strong, .dia small{
-    font-size: 1rem;
+    font-size: 0.7rem;
 }
 
 .coluna-dia {
@@ -207,7 +208,7 @@ body {
   border-radius: 8px;
   background: grey;
   width: 100%;
-  font-size: 1rem;
+  font-size: 0.7rem;
 }
 
 /* MODAL ----------------------------- */
@@ -228,6 +229,17 @@ body {
   padding: 20px;
   border-radius: 8px;
   width: 300px;
+}
+#modal-select-dia{
+    display: flex;
+    width: 100%;
+    border-radius: 12px;
+}
+#modal-horarios{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 4px;
+    margin: 15px 0;
 }
 .fechar {
   float: right;
@@ -268,8 +280,10 @@ body {
 
 .card-notif-container {
     width: 50%;
-    height: 100%;
-    margin: 60px 0px 100px 0px;
+}
+
+@media(max-width:800px){
+    
 }
 
 

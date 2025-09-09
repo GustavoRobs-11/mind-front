@@ -1,19 +1,20 @@
-:root{
-    --color-01:#F8A764;
-    --color-01-hover:#f59444;
-    --color-02:#F5E0A5;
-    --color-03:#1C5841;
-    --color-04:#00AD6E;
-    --color-05:#D46240;
-    --font-01:#FFFFFF;
-    --font-02:#16120D;
-    --btn-alerta:#8D2000;
+:root {
+    --color-01: #F8A764;
+    --color-01-hover: #f59444;
+    --color-02: #F5E0A5;
+    --color-03: #1C5841;
+    --color-04: #00AD6E;
+    --color-05: #D46240;
+    --font-01: #FFFFFF;
+    --font-02: #16120D;
+    --btn-alerta: #8D2000;
 }
 
 /* --------------------------------------------------*/
-.container-sobre-mim textarea{
+.container-sobre-mim textarea {
     height: 200px;
 }
+
 /* especializações-----------------------------------*/
 .input-tags {
     display: flex;
@@ -42,8 +43,8 @@
     background-color: var(--color-03);
     font-size: .7rem;
     color: var(--font-01) !important;
-    border-radius:5px;
-    padding:2px 6px;
+    border-radius: 5px;
+    padding: 2px 6px;
 }
 
 .tag span {
@@ -55,7 +56,7 @@
 .autocomplete-sugestoes {
     position: absolute;
     background-color: white;
-  
+
     width: 300px;
     max-height: 150px;
     overflow-y: auto;
@@ -70,36 +71,71 @@
 .autocomplete-sugestoes div:hover {
     background-color: #eee;
 }
+
 /*atendimento------------------------------------ */
-.container-agendamento{
-    margin-top: 1rem;
-    display: flex;
-    width: 100%;
+.container-agendamento {
+    background-color: grey;
+    padding: 10px;
+    margin-top: 10px;
     gap: 10px;
-    justify-content: center;
+    border-radius: 15px;
 }
-.container-agendamento select, .container-agendamento input, .container-checkbox{
+
+.container-agendamento select,
+.container-agendamento input,
+.container-checkbox {
     width: 100%;
     height: 40px;
     font-size: 1rem;
-    padding:5px;
+    margin: 10px;
     border-radius: 12px;
     border: 1px solid #ccc;
 }
-.container-checkbox{
+
+.container-checkbox {
     display: flex;
     align-items: center;
-    gap:20px;
-    border:none;
+    gap: 20px;
+    border: none;
 }
-.container-checkbox img, .container-checkbox input{
+
+.container-checkbox img,
+.container-checkbox input {
     width: 15px;
     height: 15px;
 }
-.container-checkbox img{
+
+.container-checkbox img {
     filter: invert(1);
 }
-.btn-adicionar{
+
+.atalhos {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    border: 1px solid black;
+    border-radius: 12px;
+    width: max-content;
+}
+
+#Geral,
+#Perfil,
+#Horarios {
+    color: black;
+    padding: 5px;
+    font-size: 12px;
+    border-bottom: 1px solid black;
+}
+
+#Deletar-conta {
+    color: red;
+    padding: 5px;
+    font-size: 12px;
+}
+
+
+
+.btn-adicionar {
     margin-top: 1rem;
     border: none;
     background-color: var(--color-03);
@@ -110,15 +146,81 @@
     box-shadow: 0px 0px 8px -5px #000;
     width: max-content;
 }
-.btn-adicionar:hover{
+
+.btn-adicionar:hover {
     background-color: var(--color-04);
 }
-.input-tags{
+
+.input-tags {
     border: 1px solid #ced4da;
     transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
-.input-tags:focus-within{
+
+.input-tags:focus-within {
     outline: 0;
     border-color: #80bdff;
     box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, .25);
+}
+
+.img-options{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+}
+
+#abrir-options-agendamento {
+    background: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.confirmar-agendamento {
+    border: none;
+    background-color: var(--color-03);
+    border-radius: 10px;
+    padding: 0.5rem 1rem;
+    color: var(--font-01);
+    cursor: pointer;
+    font-size: .9rem;
+    box-shadow: 0px 0px 8px -5px #000;
+}
+
+.cancelar-agendamento {
+    border: none;
+    background-color: var(--color-05);
+    border-radius: 10px;
+    padding: 0.5rem 1rem;
+    color: var(--font-01);
+    cursor: pointer;
+    font-size: .9rem;
+    box-shadow: 0px 0px 8px -5px #000;
+}
+
+.container-horario {
+    margin-top: 1rem;
+    display: flex;
+    width: 100%;
+    gap: 10px;
+    align-items: center;
+}
+
+.container-confirmar {
+    padding-top: 10px;
+    justify-content: space-between;
+}
+
+
+/* Responsividade -------------------------- */
+@media(max-width:800px) {
+   .img-options{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+    justify-content: space-around;
+}
+
 }
